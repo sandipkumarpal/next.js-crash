@@ -1,12 +1,21 @@
-import Link from 'next/link'
+import Link from "next/link";
+import Head from "next/head";
 
-export default function IndexPage() {
+const IndexPage = () => {
   return (
-    <div>
-      Hello World.{' '}
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </div>
-  )
-}
+    <>
+      <Head>
+        <title>Hello Next js</title>
+        <meta name="keyword" description="" />
+      </Head>
+      <div>
+        Hello World.{" "}
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </div>
+    </>
+  );
+};
+
+export default IndexPage;
