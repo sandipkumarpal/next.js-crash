@@ -12,6 +12,9 @@ const IndexPage = () => {
         Hello World.{" "}
         <Link href="/about">
           <a>About</a>
+        </Link> {' / '}
+        <Link href="/articles">
+          <a>Articles</a>
         </Link>
       </div>
     </>
