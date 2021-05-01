@@ -10,9 +10,15 @@
   "dependencies": {
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-gtm-module": "^2.0.11"
   },
   "license": "MIT",
-  "keywords": ["next"],
-  "description": "A \"Hello World\" application with multiple pages that shows how Next.js routing works."
+  "keywords": [
+    "next"
+  ],
+  "description": "A \"Hello World\" application with multiple pages that shows how Next.js routing works.",
+  "devDependencies": {
+    "deep-equal": "^2.0.5"
+  }
 }

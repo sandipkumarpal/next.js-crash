@@ -1,13 +1,14 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import useProductDetailsData from '../hooks/GMT/useProductDetailsData'
 
 const Article = () => {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!id) {
       return;
     }
@@ -15,6 +16,8 @@ const Article = () => {
       .then((response) => response.json())
       .then((json) => setUser(json.data));
   }, [id]);
+
+  useProductDetailsData(user)
 
   return (
     <div>

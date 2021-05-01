@@ -1,11 +1,11 @@
-import react, { useState, useLayoutEffect } from "react";
+import react, { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Articles = () => {
   const [users, setUsers] = useState();
 
-  useLayoutEffect(() => {
-    const res = fetch("https://reqres.in/api/users")
+  useEffect(() => {
+    fetch("https://reqres.in/api/users")
       .then((response) => response.json())
       .then((json) => setUsers(json));
   }, []);
