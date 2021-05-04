@@ -3,7 +3,7 @@ const Layout = (props) => {
 
   return (
     <div>
-      <h3>Title</h3>
+      <h1>Page Title</h1>
       <main>{children}</main>
     </div>
   );

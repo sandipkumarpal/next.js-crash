@@ -15,17 +15,26 @@ const Articles = () => {
       {users &&
         users.data &&
         users.data.map((u) => (
-          <div key={u.id}>
-            <Link
-              href={{
-                pathname: "/articles/[id]",
-                query: { id: u.id }
-              }}
-            >
-              {u.first_name}
-            </Link>
-          </div>
-        ))}
+        <div key={u.id}>
+          <Link
+            href={{
+              pathname: "/articles/[id]",
+              query: { id: u.id }
+            }}
+          >
+            {u.first_name}
+          </Link>
+        </div>
+      ))}
+      <p>
+        <Link
+          href={{
+            pathname: "/"
+          }}
+        >
+          Back
+        </Link>
+      </p>
     </div>
   );
 };

@@ -10,14 +10,14 @@ const useProductDetailsData = (product={}) => {
     // if (isEmpty(product)) {
     //   return
     // }
-    const { code, name, content: { description } = {} } = product
-    if (!code || !name) {
+    const { id, first_name, email } = product
+    if (!id || !first_name) {
         return
     }
     setData({
-      code: code || 'Code',
-      name: name || 'Name',
-      desc: description || 'desc'
+      code: id || 'Code',
+      name: first_name || 'Name',
+      desc: email || 'desc'
     })
   }, [product, setData])
 }
