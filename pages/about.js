@@ -1,6 +1,11 @@
 import Link from "next/link";
+import TagManager from 'react-gtm-module'
+import { GTM_DATA_PUSH_EVENT } from "../config/gmt";
 
 const AboutPage = () => {
+
+  const dataLayer = { event: GTM_DATA_PUSH_EVENT }
+
   return (
     <div>
       <h2>About</h2>
@@ -22,7 +27,7 @@ const AboutPage = () => {
         <input type="submit" value="Submit" /><br/><br/>
       </form>
         <hr/>
-    <button type="button" className="button">Just CLick</button>
+      <button type="button" className="button" onClick={ () => TagManager.dataLayer({dataLayer}) }>Just CLick</button>
     </div>
   );
 };
